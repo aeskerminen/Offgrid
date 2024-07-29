@@ -25,7 +25,7 @@ const insertData = async (data) => {
   }
 };
 
-const initializeDatabase = () => {
+const initializeDatabase = async () => {
   fs.createReadStream(dataLocation)
     .pipe(csv({ separator: "\t" }))
     .on("data", (row) => {
@@ -39,4 +39,4 @@ const initializeDatabase = () => {
     });
 };
 
-initializeDatabase();
+module.exports = initializeDatabase;
