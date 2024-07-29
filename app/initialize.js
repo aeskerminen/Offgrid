@@ -1,5 +1,9 @@
 const fs = require("fs");
 const csv = require("csv-parser");
+const util = require("util");
+const stream = require("stream");
+
+const pipeline = util.promisify(stream.pipeline);
 
 const sql = require("./database");
 
@@ -21,7 +25,7 @@ const insertData = async (data) => {
   try {
     await query;
   } catch (err) {
-    console.error("Error inserting to database:", err);
+    console.error("Error inserting to database.");
   }
 };
 
