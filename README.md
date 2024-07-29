@@ -1,5 +1,8 @@
 # OFFGRID
 
+### Usage
+
+
 ### Where do I get the location data from?
 
 The location data has been provided free of charge by geonames.org. As of development,
