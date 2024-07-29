@@ -8,4 +8,6 @@ COPY . .
 
 RUN npm install
 
+
+CMD ["node", "initialize.js"]
 CMD ["node", "index.js"]
